@@ -22,6 +22,6 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-.status-bar__column .fas fa-battery-full {
-  margin: 0px 3px;
+.status-bar_column .fa-battery-full {
+  margin: 0px 5px;
 }
