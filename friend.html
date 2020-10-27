@@ -66,8 +66,10 @@
           </div>
         </div>
         <div class="user-component__column">
-          <span>2</span>
+          <div> <!--div 안에 span 2를 넣어줌으로써 분리시키게 되면 user-component__column 영향을 받지 않음-->
+            <span>2</span>
           <i class="fas fa-chevron-right fa-xs"></i>
+          </div>
         </div>      
       </div>
     </main>
@@ -79,7 +81,7 @@
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
-            <span class="nav__notification">1</span>
+            <span class="nav__notification badge">1</span>
             <i class="far fa-comment fa-2x"></i></a>
         </li>
         <li class="nav__btn">
