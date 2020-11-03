@@ -24,11 +24,11 @@
 
     <header>
       <div class="screen-header">
-        <h1 class="screen-header__title">Friend</h1>
+        <h1 class="screen-header__title">Friends</h1>
         <div class="screen-header__icons">
-          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><a href="find.html"><i class="fas fa-search fa-lg"></i></a></span>
           <span><i class="fas fa-music fa-lg"></i></span>
-          <span><i class="fas fa-cog fa-lg"></i></span>
+          <span><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a></span>
         </div>
       </div>
     </header>
@@ -39,6 +39,7 @@
 
     <main class="friends-screen">
       <div class="user-component">
+        <a href="chat.html">
         <div class="user-component__column">
           <img src="img/KakaoTalk_20200704_193916030.jpg"
           class="user-component__avatar user-component__avatar--xl" />
@@ -49,7 +50,8 @@
         </div>
         <div class="user-component__column">
   
-        </div>      
+        </div>
+      </a>
       </div>
       <div class="friends-screen__channel">
         <div class="friends-screen__channel-header">
@@ -94,7 +96,9 @@
         </li>
       </ul>
     </nav>
-
+    <div id="splash-screen">
+      <i class="fas fa-comment"></i>
+    </div>
     <script
       src="https://kit.fontawesome.com/56f9f6f41a.js"
       crossorigin="anonymous"

@@ -27,3 +27,28 @@
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
 }
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute; /*absolute인 div는 가장 가까운 relative인 부모에 맞춰 정렬된다.*/
+  height: 100vh; /*내멋대로 암기식:View Height*/
+  width: 100vw; /*내멋대로 암기식:View Width*/
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards; /*forwards는 마지막 keyframes 기억하기.*/
+  animation-delay: 0.5s;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden; /*새로고침 후에도 남아있는 opacity로 인해 클릭안되는 현상 해결법*/
+  }
+}

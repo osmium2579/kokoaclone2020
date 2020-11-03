@@ -39,6 +39,7 @@
 
 .message-row {
   width: 100%;
+  margin-bottom: 25px;
   display: flex;
 }
 
@@ -50,14 +51,109 @@
 }
 
 .message__author {
-  opacity: 0.8;
-  font-size: 13px;
   margin-bottom: 5px;
   display: block;
 }
 
 .message__bubble {
   background-color: white;
-  padding: 8px 10px;
+  padding: 8px 13px;
   border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message-time,
+.message-author {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message-row--own {
+  justify-content: flex-end; /*justify-content는 수평 적용에 사용;*/
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+/*order 속성은 오로지 flex children에게만 적용 가능하다.*/
+/* .message-row--own .message__bubble {
+  order: 1;
+}
+.message-row--own .message__time {
+  order: 0;
+} */
+
+.message-row--own .message__info {
+  flex-direction: row-reverse; /*말풍선과 시간 역방향 배치*/
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute; /*position:absolute로 버튼+화살표를 한번에 묶고 right:0 먹여서 고정??*/
+  right: -3px;
+  top: 2px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+/* 화살 버튼 눌렀을 때 검정색 사각 outline 삭제방법 */
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
 }
