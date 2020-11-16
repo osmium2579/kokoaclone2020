@@ -29,12 +29,12 @@
 
 #login-form input::placeholder {
   color: rgba(0, 0, 0, 0.4);
-}
+} /*::선택 지정하여 원하는 부분만 수정가능*/
 #login-form input:focus:not([type="submit"]) {
-  border-color: var(--yellow);
+  border-color: var(--yellow); /*variables 폴더를 만들어서 변수파일 생성*/
 }
 #login-form input:not([type="submit"]) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /*submit 밑줄 투명도 설정*/
   transition: border-color 0.3s ease-in-out;
 }
 #login-form input[type="submit"] {
